@@ -1,0 +1,6 @@
+/target/
+/node/
+/src/main/webapp/node_modules/
+/src/main/webapp/etc/
+/npm-debug.log
+/nb-configuration.xml

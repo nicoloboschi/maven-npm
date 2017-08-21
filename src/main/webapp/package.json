@@ -1,0 +1,12 @@
+{
+   "name":"maven-npm",
+   "version":"1.0.0",
+   "devDependencies": {
+   "jshint": "latest",
+   "mocha": "latest",
+   "rimraf": "latest"
+   },
+    "scripts": {
+    }
+}
+
