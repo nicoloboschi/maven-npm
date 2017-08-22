@@ -18,7 +18,7 @@ And the deploy the application.
 
 # How it works
 
-With [maven-frontend-plugin] (https://github.com/eirslett/frontend-maven-plugin) we install project-locally NodeJS and NPM (Node Package Manager).
+With [maven-frontend-plugin](https://github.com/eirslett/frontend-maven-plugin) we install project-locally NodeJS and NPM (Node Package Manager).
 
 Then, we run a sequence of npm's scripts, declared in package.json.
 
@@ -37,7 +37,7 @@ It creates a single file containing our entire application (build/main.bundle.js
 
 ## Jest
 
-It simply run project's test (src/jsxcomponents/Simplelist.test.js) [Jest] (https://facebook.github.io/jest/)
+It simply run project's test (src/jsxcomponents/Simplelist.test.js) [Jest](https://facebook.github.io/jest/)
 
 
 
