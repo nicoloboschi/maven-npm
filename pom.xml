@@ -77,23 +77,53 @@
                 <executions>
                     <execution>
                         <id>install node and npm</id>
-                        <phase>generate-resources</phase>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>install-node-and-npm</goal>
                         </goals>
                         <configuration>
-                            <nodeVersion>v0.10.18</nodeVersion>
-                            <npmVersion>3.10.7</npmVersion>
+                            <nodeVersion>v7.5.0</nodeVersion>
+                            <npmVersion>4.1.0</npmVersion>
                         </configuration>
                     </execution>
                     <execution>
                         <id>npm install</id>
-                        <phase>generate-resources</phase>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <arguments>--prefix ./src/main/webapp install --verbose ./src/main/webapp</arguments>
+                            <arguments>--prefix ./src/main/webapp install ./src/main/webapp</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm code-quality</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run --prefix ./src/main/webapp jshint</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm webpack</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run --prefix ./src/main/webapp webpack</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run --prefix ./src/main/webapp test</arguments>
                         </configuration>
                     </execution>
                 </executions>
